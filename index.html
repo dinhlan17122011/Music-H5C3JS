@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình phát nhạc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Trình phát nhạc</h1>
+            <ul>
+                <li>Trang Chủ</li>
+                <li>Bài Hát</li>
+                <li>Album</li>
+                <li>Liên Hệ</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="playlist">
+                <h2>Danh sách bài hát</h2>
+                <ul id="song-list"></ul>
+            </div>
+
+            <div class="player">
+                <img id="cover" src="cover.jpg" alt="Album Cover">
+                <h3 id="title">Bài hát</h3>
+                <p id="artist">Nghệ sĩ</p>
+                <audio id="audio" src=""></audio>
+                <div class="time-info">
+                    <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+                </div>
+                <div class="controls">
+                    <button id="prev">⏮️</button>
+                    <button id="play">▶️</button>
+                    <button id="next">⏭️</button>
+                </div>
+                <input type="range" id="progress" value="0" min="0" max="100">
+                <label for="volume">Âm lượng:</label>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                <input type="file" id="file-input" accept="audio/*" />
+                <button id="upload">Tải lên nhạc</button>
+            </div>
+
+            <div class="video">
+                <h2>Video từ YouTube</h2>
+                <div id="video-suggestions"></div>
+                <input type="text" id="video-title" placeholder="Nhập tên bài hát" />
+                <button id="search-video">Tìm video</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

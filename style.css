@@ -1,0 +1,164 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Giao diện tổng thể */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Thanh điều hướng */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navbar li:hover {
+  color: #1db954;
+}
+
+/* Nội dung trang */
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Danh sách bài hát */
+.playlist {
+  flex: 1;
+  background-color: #282828;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.playlist h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.playlist ul {
+  list-style-type: none;
+}
+
+.playlist li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.playlist li:hover {
+  background-color: #333;
+}
+
+.playlist li.active {
+  color: #1db954;
+  font-weight: bold;
+}
+
+/* Trình phát nhạc */
+.player {
+  width: 350px;
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.player img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#progress {
+  width: 100%;
+  margin-top: 10px;
+  appearance: none;
+  height: 5px;
+  background-color: #444;
+}
+
+#progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #1db954;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#progress::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #1db954;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Video YouTube */
+.video {
+  flex: 1;
+  background-color: #282828;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.video h2 {
+  margin-bottom: 15px;
+}
